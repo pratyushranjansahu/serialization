@@ -8,10 +8,12 @@ public static void main(String[] args)throws Exception{
 Dog dog=new Dog();
 dog.i=10;
 dog.j=20;
-//FileOutputStream fos=new FileOutputStream("D:/Study/java/durgasirvideo/demoprograms/serializationtest");
+//saving dog object to file 
 FileOutputStream fos=new FileOutputStream("dog.src");
 ObjectOutputStream oos=new ObjectOutputStream(fos);
 oos.writeObject(dog);
+  
+  //retriving  dog object from file 
 FileInputStream fis=new FileInputStream("dog.src");
 ObjectInputStream ois=new ObjectInputStream(fis);
   Dog dog2=(Dog)ois.readObject();
